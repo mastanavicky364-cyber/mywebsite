@@ -4,57 +4,57 @@
 
 <title>Vastram</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#f5f5f5;
+background:#111;
+color:white;
 }
 
-nav{
-background:black;
-color:white;
-padding:15px;
+header{
 display:flex;
 justify-content:space-between;
+padding:20px;
+background:black;
 }
 
-nav a{
+header a{
 color:white;
 text-decoration:none;
 margin:0 10px;
 }
 
 .hero{
-background:#111;
-color:white;
 text-align:center;
 padding:80px 20px;
+background:#000;
 }
 
 .delivery{
-background:#ffc107;
 text-align:center;
+background:#ffc107;
+color:black;
 padding:10px;
-font-weight:bold;
 }
 
 .products{
 display:flex;
+flex-wrap:wrap;
 justify-content:center;
 gap:30px;
 padding:40px;
-flex-wrap:wrap;
 }
 
 .product{
-background:white;
+background:#1c1c1c;
 padding:20px;
-width:220px;
-text-align:center;
+width:240px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
 }
 
 .product img{
@@ -62,31 +62,33 @@ width:100%;
 border-radius:10px;
 }
 
-.product button{
+.product select{
+margin-top:10px;
+padding:5px;
+}
+
+button{
 margin-top:10px;
 padding:10px;
-background:black;
-color:white;
 border:none;
+background:#fff;
 cursor:pointer;
 }
 
-.about{
-padding:50px;
-text-align:center;
+.cart{
+position:fixed;
+bottom:20px;
+right:20px;
 background:white;
-}
-
-.contact{
-text-align:center;
-padding:40px;
+color:black;
+padding:10px 20px;
+border-radius:30px;
 }
 
 footer{
-background:black;
-color:white;
 text-align:center;
-padding:20px;
+padding:30px;
+background:black;
 }
 
 </style>
@@ -95,28 +97,26 @@ padding:20px;
 
 <body>
 
-<nav>
+<header>
 
-<div><b>VASTRAM</b></div>
+<h2>VASTRAM</h2>
 
 <div>
 <a href="#">Home</a>
 <a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
 </div>
 
-</nav>
+</header>
 
 <div class="delivery">
-⚡ Fast Delivery in 20-30 Minutes (3-6 KM Area)
+⚡ Fast Delivery 20-30 Minutes | Service Area 3-6 KM
 </div>
 
 <section class="hero">
 
-<h1>Premium Clothing Collection</h1>
+<h1>Simple Premium Fashion</h1>
 
-<p>Order your favorite outfit with fast delivery</p>
+<p>Order clothes with fast local delivery</p>
 
 </section>
 
@@ -129,23 +129,32 @@ padding:20px;
 <h3>Oversized T-Shirt</h3>
 
 <p>₹799</p>
-<label>Select Size:</label>
 
 <select>
 
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
+<option>Size S</option>
+<option>Size M</option>
+<option>Size L</option>
+<option>Size XL</option>
 
 </select>
-<a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Oversized%20T-Shirt.%20Price%20₹799.%20Delivery%2020-30%20minutes.%20Please%20send%20your%20location.">
+
+<select>
+
+<option>Black</option>
+<option>White</option>
+<option>Grey</option>
+
+</select>
+
+<a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Oversized%20T-Shirt.%20Price%20799.%20Delivery%2020-30%20minutes.%20Please%20share%20location.">
 
 <button>Order on WhatsApp</button>
 
 </a>
 
 </div>
+
 
 <div class="product">
 
@@ -154,23 +163,32 @@ padding:20px;
 <h3>Premium Hoodie</h3>
 
 <p>₹1499</p>
-<label>Select Size:</label>
 
 <select>
 
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
+<option>Size S</option>
+<option>Size M</option>
+<option>Size L</option>
+<option>Size XL</option>
 
 </select>
-<a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Hoodie.%20Price%20₹1499.%20Delivery%2020-30%20minutes.%20Please%20send%20your%20location.">
+
+<select>
+
+<option>Black</option>
+<option>Grey</option>
+<option>Blue</option>
+
+</select>
+
+<a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Hoodie.%20Price%201499.%20Delivery%2020-30%20minutes.%20Please%20share%20location.">
 
 <button>Order on WhatsApp</button>
 
 </a>
 
 </div>
+
 
 <div class="product">
 
@@ -179,17 +197,25 @@ padding:20px;
 <h3>Winter Jacket</h3>
 
 <p>₹2499</p>
-<label>Select Size:</label>
 
 <select>
 
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
+<option>Size S</option>
+<option>Size M</option>
+<option>Size L</option>
+<option>Size XL</option>
 
 </select>
-<a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Jacket.%20Price%20₹2499.%20Delivery%2020-30%20minutes.%20Please%20send%20your%20location.">
+
+<select>
+
+<option>Black</option>
+<option>Brown</option>
+<option>Green</option>
+
+</select>
+
+<a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Winter%20Jacket.%20Price%202499.%20Delivery%2020-30%20minutes.%20Please%20share%20location.">
 
 <button>Order on WhatsApp</button>
 
@@ -199,36 +225,21 @@ padding:20px;
 
 </section>
 
-<section class="about" id="about">
+<div class="cart">
 
-<h2>About Us</h2>
+Cart (0)
 
-<p>
-
-We deliver stylish clothing with fast delivery in your nearby area.
-Our goal is to provide quality fashion with quick service.
-
-</p>
-
-</section>
-
-<section class="contact" id="contact">
-
-<h2>Contact</h2>
-
-<p>Order directly on WhatsApp</p>
-
-<a href="https://wa.me/916230353687">
-
-<button>Chat on WhatsApp</button>
-
-</a>
-
-</section>
+</div>
 
 <footer>
 
-© 2026 Vastram
+<p>Delivery time: 20-30 minutes</p>
+
+<p>Delivery area: 3-6 KM</p>
+
+<p>Delivery charge depends on distance</p>
+
+<p>© 2026 Vastram</p>
 
 </footer>
 
