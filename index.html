@@ -1,111 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Vastram</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
-
 body{
-margin:0;
-font-family:Arial;
-background:#111;
-color:white;
+  margin:0;
+  font-family: Arial;
+  background:#f5f5f5;
+  color:#111;
 }
-
 header{
-display:flex;
-justify-content:space-between;
-padding:20px;
-background:black;
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#000;
+  color:white;
 }
-
 header a{
-color:white;
-text-decoration:none;
-margin:0 10px;
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
 }
-
 .hero{
-text-align:center;
-padding:80px 20px;
-background:#000;
+  text-align:center;
+  padding:80px 20px;
+  background:#111;
+  color:white;
 }
-
 .delivery{
-text-align:center;
-background:#ffc107;
-color:black;
-padding:10px;
+  text-align:center;
+  background:#ffc107;
+  color:black;
+  padding:10px;
 }
-
 .products{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-padding:40px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  padding:40px;
 }
-
 .product{
-background:#1c1c1c;
-padding:20px;
-width:240px;
-border-radius:10px;
-text-align:center;
+  background:white;
+  padding:20px;
+  width:240px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
-
 .product img{
-width:100%;
-border-radius:10px;
+  width:100%;
+  border-radius:10px;
 }
-
 .product select{
-margin-top:10px;
-padding:5px;
+  margin-top:10px;
+  padding:5px;
+  width:80%;
 }
-
-button{
-margin-top:10px;
-padding:10px;
-border:none;
-background:#fff;
-cursor:pointer;
+.product button{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  background:black;
+  color:white;
+  cursor:pointer;
+  width:90%;
+  border-radius:5px;
 }
-
-.cart{
-position:fixed;
-bottom:20px;
-right:20px;
-background:white;
-color:black;
-padding:10px 20px;
-border-radius:30px;
-}
-
 footer{
-text-align:center;
-padding:30px;
-background:black;
+  text-align:center;
+  padding:30px;
+  background:#000;
+  color:white;
 }
-
+@media(max-width:768px){
+  .products{flex-direction:column; align-items:center;}
+  .product{width:90%;}
+}
 </style>
-
 </head>
-
 <body>
 
 <header>
-
-<h2>VASTRAM</h2>
-
-<div>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-</div>
-
+  <h2>VASTRAM</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </div>
 </header>
 
 <div class="delivery">
@@ -113,134 +96,89 @@ background:black;
 </div>
 
 <section class="hero">
-
 <h1>Simple Premium Fashion</h1>
-
-<p>Order clothes with fast local delivery</p>
-
+<p>Order your favorite outfit with fast local delivery</p>
 </section>
 
 <section class="products" id="products">
 
+<!-- Product 1 -->
 <div class="product">
-
 <img src="shirt.jpg">
-
 <h3>Oversized T-Shirt</h3>
-
 <p>₹799</p>
-
 <select>
-
 <option>Size S</option>
 <option>Size M</option>
 <option>Size L</option>
 <option>Size XL</option>
-
 </select>
-
 <select>
-
 <option>Black</option>
 <option>White</option>
 <option>Grey</option>
-
 </select>
-
 <a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Oversized%20T-Shirt.%20Price%20799.%20Delivery%2020-30%20minutes.%20Please%20share%20location.">
-
 <button>Order on WhatsApp</button>
-
 </a>
-
 </div>
 
-
+<!-- Product 2 -->
 <div class="product">
-
 <img src="hoodie.jpg">
-
 <h3>Premium Hoodie</h3>
-
 <p>₹1499</p>
-
 <select>
-
 <option>Size S</option>
 <option>Size M</option>
 <option>Size L</option>
 <option>Size XL</option>
-
 </select>
-
 <select>
-
 <option>Black</option>
 <option>Grey</option>
 <option>Blue</option>
-
 </select>
-
 <a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Hoodie.%20Price%201499.%20Delivery%2020-30%20minutes.%20Please%20share%20location.">
-
 <button>Order on WhatsApp</button>
-
 </a>
-
 </div>
 
-
+<!-- Product 3 -->
 <div class="product">
-
 <img src="jacket.jpg">
-
 <h3>Winter Jacket</h3>
-
 <p>₹2499</p>
-
 <select>
-
 <option>Size S</option>
 <option>Size M</option>
 <option>Size L</option>
 <option>Size XL</option>
-
 </select>
-
 <select>
-
 <option>Black</option>
 <option>Brown</option>
 <option>Green</option>
-
 </select>
-
 <a href="https://wa.me/916230353687?text=Hello%20I%20want%20to%20order%20Winter%20Jacket.%20Price%202499.%20Delivery%2020-30%20minutes.%20Please%20share%20location.">
-
 <button>Order on WhatsApp</button>
-
 </a>
-
 </div>
 
 </section>
 
-<div class="cart">
-
-Cart (0)
-
-</div>
+<section id="contact" style="text-align:center; padding:50px;">
+<h2>Contact & Orders</h2>
+<p>Order directly on WhatsApp</p>
+<a href="https://wa.me/916230353687">
+<button style="width:200px;">Chat on WhatsApp</button>
+</a>
+</section>
 
 <footer>
-
-<p>Delivery time: 20-30 minutes</p>
-
-<p>Delivery area: 3-6 KM</p>
-
+<p>Delivery time: 20-30 minutes | Area: 3-6 KM</p>
 <p>Delivery charge depends on distance</p>
-
 <p>© 2026 Vastram</p>
-
 </footer>
 
 </body>
